@@ -1,0 +1,50 @@
+@red: #e92322;
+.header {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  //background-color: #0ff;
+  .row {
+    height: 100%;
+    > div:nth-of-type(-n+3) {
+      //height: 50px;
+      text-align: center;
+      border-right: 1px solid #ccc;
+      > .header_wx {
+        position: relative;
+        display: block;
+        height: 100%;
+        > img {
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0%;
+        }
+        &:hover {
+          > img {
+            display: block;
+          }
+        }
+      }
+
+    }
+    > div:last-of-type{
+      text-align: center;
+      .btn-danger{
+        background-color: @red;
+        color: #fff;
+        padding:3px 15px;
+        &:hover{
+          background-color: @red;
+        }
+      }
+      .btn-link{
+        color: #000;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
